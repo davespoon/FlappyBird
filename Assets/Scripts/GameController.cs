@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -27,7 +28,7 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
-        if (gameOver == true && Input.GetButtonDown("Fire1"))
+        if (gameOver == true && Input.touches.Any(x => x.phase == TouchPhase.Began))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
