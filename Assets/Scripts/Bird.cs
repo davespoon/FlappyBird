@@ -19,7 +19,7 @@ public class Bird : MonoBehaviour
     {
         if (isDead == false)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetButtonDown("Fire1"))
             {
                 rb2d.velocity = Vector2.zero;
                 rb2d.AddForce(new Vector2(0, upFurce));

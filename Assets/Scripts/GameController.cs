@@ -27,7 +27,7 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
-        if (gameOver == true && Input.GetMouseButtonDown(0))
+        if (gameOver == true && Input.GetButtonDown("Fire1"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
